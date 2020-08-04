@@ -1,26 +1,19 @@
+@import 'extends';
 
 $bWidht:150px;
 $bHeight:100px;
 
 .buttonStyle1{
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: $bWidht;
-    height: $bHeight;
-    transition: 0.5s;
+    @include componentCenter(relative,$bWidht,$bHeight);
+
     div{
         position: absolute;
         width: 100%;        
         height: 100%;
     }
     .span_style1{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: 50%;
-        transform: translate(-50%,-50%);
+        @include componentCenter(absolute);
+
         cursor: pointer;
         user-select: none;
     }
@@ -41,9 +34,7 @@ $bHeight:100px;
     width: 100%;
     height: 100%;
 }
-.rect_style1{
-    //fill: transparent;
-    //stroke: rgba(153, 25, 153, 0.952);
+.rect_style1{ 
     stroke-width: 10px;
     stroke-dasharray: ($bHeight/2) ($bWidht*2+$bHeight+$bHeight/2);
     stroke-dashoffset: ($bHeight/4);

@@ -11,6 +11,7 @@ import $ from 'jquery'
 
 //Custom components
 import ButtonStyle1 from './Components/Style1'
+import ButtonStyle2 from './Components/Style2'
 //
 
 class Field extends React.Component {
@@ -66,12 +67,25 @@ class Field extends React.Component {
             </figure>
             
             <figure>
-              <div className="card">Box radius попробуй</div>
+              <div className="card">
+                <ButtonStyle2/>
+              </div>
               <figcaption>
                 <svg >
                   <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'/>
                 </svg>
                 <span>Definition 2</span>                
+              </figcaption>
+            </figure>
+            <figure>
+              <div className="card">SASS фишки тут испытай. Типа рандом + for для динамического изменения
+              Условно как в музыке чтобы прямоугольники прыгали                
+              </div>
+              <figcaption>
+                <svg >
+                  <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'/>
+                </svg>
+                <span>Definition 3</span>                
               </figcaption>
             </figure>
           </div>        

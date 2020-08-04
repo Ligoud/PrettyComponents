@@ -1,0 +1,44 @@
+@import 'extends';
+
+$width:100px;
+$height:100px;
+
+.buttonStyle2{
+    @include componentCenter(relative,$width,$height);
+    
+    div{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        border: 1px solid black;    
+        //border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+        animation: rdm 3s linear 0s infinite;    
+        animation-play-state: paused;                
+        
+    }
+    &:hover div{
+        animation-play-state: running;
+    }
+    span{
+        @include componentCenter(absolute);
+        user-select: none;
+    }
+    
+}
+//Подправить тут. Раньше времени приходят и стоят
+@keyframes rdm {
+    18%{        
+        @include borderRadius(50%, 40%, 30%, 90%, 30%, 10%, 56%, 25%)
+    }    
+    40%{
+        @include borderRadius(30%, 10%, 56%, 25%, 50%, 40%, 30%, 90%)
+    }
+    60%{
+        @include borderRadius(67%, 73%, 48%, 39%, 81%, 25%, 87%, 72%)
+    }
+    85%{
+        @include borderRadius(81%, 25%, 87%, 72%, 67%, 73%, 48%, 39%)
+    }
+}
+//Добавить еще несколько на фоне пузырей
+
