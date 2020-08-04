@@ -22,6 +22,7 @@ $bHeight:100px;
         margin-right: 50%;
         transform: translate(-50%,-50%);
         cursor: pointer;
+        user-select: none;
     }
     &:hover{
         box-shadow:inset 0 0 5px 5px black;
