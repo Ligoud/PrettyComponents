@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PrettyComponents/static/css/main.07d083da.chunk.css",
+    "main.css": "/PrettyComponents/static/css/main.a8392f68.chunk.css",
     "main.js": "/PrettyComponents/static/js/main.25c79087.chunk.js",
     "main.js.map": "/PrettyComponents/static/js/main.25c79087.chunk.js.map",
     "runtime-main.js": "/PrettyComponents/static/js/runtime-main.1b09cc04.js",
@@ -8,15 +8,15 @@
     "static/js/2.a742d18c.chunk.js": "/PrettyComponents/static/js/2.a742d18c.chunk.js",
     "static/js/2.a742d18c.chunk.js.map": "/PrettyComponents/static/js/2.a742d18c.chunk.js.map",
     "index.html": "/PrettyComponents/index.html",
-    "precache-manifest.6b7e106e95efab317552981b63048d7a.js": "/PrettyComponents/precache-manifest.6b7e106e95efab317552981b63048d7a.js",
+    "precache-manifest.90bf81dc0bb13598e94789563e84bea8.js": "/PrettyComponents/precache-manifest.90bf81dc0bb13598e94789563e84bea8.js",
     "service-worker.js": "/PrettyComponents/service-worker.js",
-    "static/css/main.07d083da.chunk.css.map": "/PrettyComponents/static/css/main.07d083da.chunk.css.map",
+    "static/css/main.a8392f68.chunk.css.map": "/PrettyComponents/static/css/main.a8392f68.chunk.css.map",
     "static/js/2.a742d18c.chunk.js.LICENSE.txt": "/PrettyComponents/static/js/2.a742d18c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.1b09cc04.js",
     "static/js/2.a742d18c.chunk.js",
-    "static/css/main.07d083da.chunk.css",
+    "static/css/main.a8392f68.chunk.css",
     "static/js/main.25c79087.chunk.js"
   ]
 }
