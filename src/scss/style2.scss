@@ -58,6 +58,7 @@ $eggRadius:63%, 37%, 58%, 42%, 58%, 31%, 69%, 42% ;
         z-index: 3;
         @include componentCenter(absolute);
         user-select: none;
+        cursor: pointer;
     }
     
 }
