@@ -52,7 +52,7 @@ class Field extends React.Component {
             
           </Navbar>
           
-          <div id='field'>
+          <div id='field' className='hideScrollBar'>
             <figure>
               <div className="card">
                               

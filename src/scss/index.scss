@@ -58,6 +58,8 @@ svg{
   height: calc(100vh - #{$navtopH});
   padding-top: 20px;
   padding-left: 20px;
+  overflow-y: scroll;
+  
   transition: .5s all;
   //Темная тема
   &.dark{
