@@ -33,7 +33,7 @@ class Field extends React.Component {
             <Navbar.Brand href='#'>
               <div className='cutlogo'>
                 <img
-                  src='/FirstLogo.png'
+                  src='./FirstLogo.png'
                   alt=''
                 />  
               </div>                                        
@@ -62,7 +62,7 @@ class Field extends React.Component {
                 <svg >
                   <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'></polygon>                  
                 </svg>
-                <span>Definition 1</span>
+                <span>Frame Button</span>
               </figcaption>
             </figure>
             
@@ -74,12 +74,11 @@ class Field extends React.Component {
                 <svg >
                   <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'/>
                 </svg>
-                <span>Definition 2</span>                
+                <span>Slime Button</span>                
               </figcaption>
             </figure>
             <figure>
-              <div className="card">SASS фишки тут испытай. Типа рандом + for для динамического изменения
-              Условно как в музыке чтобы прямоугольники прыгали                
+              <div className="card">               
               </div>
               <figcaption>
                 <svg >

@@ -2,6 +2,7 @@
 
 $width:100px;
 $height:100px;
+$eggRadius:63%, 37%, 58%, 42%, 58%, 31%, 69%, 42% ;
 
 .buttonStyle2{
     @include componentCenter(relative,$width,$height);
@@ -10,34 +11,99 @@ $height:100px;
         position: absolute;
         height: 100%;
         width: 100%;
-        border: 1px solid black;    
-        //border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-        animation: rdm 3s linear 0s infinite;    
-        animation-play-state: paused;                
-        
+        cursor: pointer;
+        //border: 1px solid black;    
+        //
+        &.fl1{
+            
+            @include componentCenter('absolute',90%,90%);
+            
+            z-index: 2;
+            animation: fluidButton1 3s linear 0s infinite;    
+            animation-play-state: paused;                
+            animation-direction: alternate;
+                     
+            background: linear-gradient(to top right,#12CBC4,#0652DD,#a55eea,#be2edd,#ff7979,#f9ca24 );
+            background-size: 300% 100%;   
+
+            background-position: 0% ; 
+            
+            @include borderRadius(63%, 37%, 58%, 42%, 58%, 31%, 69%, 42%);
+            
+        }
+        &.fl2{
+            z-index: 1;
+            animation: fluidButton2 3s linear 0s infinite;    
+            animation-play-state: paused;                
+            animation-direction: alternate;
+
+            background: linear-gradient(to top right,#009432,#2ed573, #4cd137,#A3CB38 );
+            background-size: 300% 100%;   
+
+            //background: linear-gradient(to top right,#0652DD,#12CBC4,#a55eea,#be2edd,#f9ca24,#ff7979 );
+
+            border-radius: 5%;
+        }
     }
     &:hover div{
-        animation-play-state: running;
+        &.fl1{
+            animation-play-state: running;
+        }
+        &.fl2{
+            animation-play-state: running;
+        }
+        
     }
     span{
+        z-index: 3;
         @include componentCenter(absolute);
         user-select: none;
     }
     
 }
 //Подправить тут. Раньше времени приходят и стоят
-@keyframes rdm {
-    18%{        
-        @include borderRadius(50%, 40%, 30%, 90%, 30%, 10%, 56%, 25%)
+@keyframes fluidButton1 {
+    
+    14%{        
+        @include borderRadius(90%, 80%, 70%, 90%, 80%, 10%, 26%, 35%);
+        background-position: 14% ; 
     }    
     40%{
-        @include borderRadius(30%, 10%, 56%, 25%, 50%, 40%, 30%, 90%)
+        @include borderRadius(70%, 80%, 96%, 66%, 50%, 70%, 80%, 90%);        
+        background-position: 40%;
     }
     60%{
-        @include borderRadius(67%, 73%, 48%, 39%, 81%, 25%, 87%, 72%)
+        @include borderRadius(67%, 73%, 88%, 99%, 81%, 65%, 87%, 72%);
+        background-position: 60%;
     }
     85%{
-        @include borderRadius(81%, 25%, 87%, 72%, 67%, 73%, 48%, 39%)
+        @include borderRadius(81%, 95%, 87%, 72%, 67%, 73%, 88%, 79%);  
+        background-position: 85%;      
+    }
+    100%{
+        background-position: 100%;
+    }
+}
+@keyframes fluidButton2 {
+    
+    14%{        
+        @include borderRadius(50%, 40%, 30%, 20%, 30%, 10%, 36%, 25%);
+        background-position: 14% ; 
+    }    
+    40%{
+        @include borderRadius(30%, 10%, 26%, 25%, 50%, 40%, 30%, 15%);
+        background-position: 40%;
+    }
+    60%{
+        @include borderRadius(47%, 23%, 48%, 39%, 11%, 25%, 47%, 32%);
+        background-position: 60%;
+    }
+    85%{
+        @include borderRadius(21%, 25%, 37%, 42%, 29%, 13%, 48%, 39%);
+        background-position: 85%;      
+    }
+    100%{
+        background-position: 100%;
     }
 }
 //Добавить еще несколько на фоне пузырей
