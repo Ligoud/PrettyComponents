@@ -1,8 +1,6 @@
 @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
+@import 'variables';
 
-$navtopH: 80px; //Высоат нава верхнего
-$fieldDarkColor: #292b2c; //Цвет темной темы фона поля
-$LED: #44bd32; //Цвет боковой подсветки
 
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
@@ -58,6 +56,7 @@ svg{
   height: calc(100vh - #{$navtopH});
   padding-top: 20px;
   padding-left: 20px;
+  padding-right: 20px;
   overflow-y: scroll;
   
   transition: .5s all;

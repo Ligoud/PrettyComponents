@@ -1,98 +1,53 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Navbar from 'react-bootstrap/Navbar'
-//import Container from 'react-bootstrap/Container'
-import Form from 'react-bootstrap/Form'
-import { Nav } from 'react-bootstrap'
+
 
 import './scss/index.scss'
 
-import $ from 'jquery'
 
-//Custom components
-import ButtonStyle1 from './Components/Style1'
-import ButtonStyle2 from './Components/Style2'
+//Pages
+import PrettyComponents from './Components/PrettyComponents'
+import PrettyNavbar from './Components/PrettyNavbar'
+import PrettySortingAlgs from './Components/PrettySortingAlgs'
+
 //
 
 class Field extends React.Component {
+    constructor(props){
+      super(props)
+      this.navclicked=this.navclicked.bind(this)
+      this.state={
+        navPage:'page1',
+      }
+    }
+    navclicked(type){
+      this.setState({navPage:type})
 
-    switched(){
-      console.log('Something')
-      $('#field').toggleClass('dark')
-      
     }
     componentDidMount(){
       console.log('Page loaded')
     }
     //
 
-    render() {    
+    render() {        
+      let body
+      if(this.state.navPage==='page1'){
+        body=<PrettyComponents/> 
+      }else if(this.state.navPage==='page2'){
+        body=<PrettySortingAlgs key={new Date()}/>  //Чтобы постоянно работала кнопка
+      }  
+
       return (
         <div>
-          <Navbar  variant='dark' bg='dark' className='navtop'>
-            <Navbar.Brand href='#'>
-              <div className='cutlogo'>
-                <img
-                  src='./FirstLogo.png'
-                  alt=''
-                />  
-              </div>                                        
-            </Navbar.Brand>
-            <Nav className='ml-auto'>
-              <Form >
-                <Form.Switch
-                  inline
-                  custom
-                  id='themeSwitcher'
-                  label='On/Off dark theme'
-                  onChange={this.switched}
-                />
-              </Form>
-            </Nav>
-            
-          </Navbar>
-          
+          <PrettyNavbar onNavClicked={this.navclicked}/>
           <div id='field' className='hideScrollBar'>
-            <figure>
-              <div className="card">
-                              
-                <ButtonStyle1></ButtonStyle1>
-              </div>
-              <figcaption>
-                <svg >
-                  <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'></polygon>                  
-                </svg>
-                <span>Frame Button</span>
-              </figcaption>
-            </figure>
-            
-            <figure>
-              <div className="card">
-                <ButtonStyle2/>
-              </div>
-              <figcaption>
-                <svg >
-                  <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'/>
-                </svg>
-                <span>Slime Button</span>                
-              </figcaption>
-            </figure>
-            <figure>
-              <div className="card">               
-              </div>
-              <figcaption>
-                <svg >
-                  <polygon points='0,0 200,0 170,40 30,40'   fill='transparent'/>
-                </svg>
-                <span>Definition 3</span>                
-              </figcaption>
-            </figure>
-          </div>        
-        </div>
+            {body}           
+          </div>          
+        </div>        
       );
     }
   }
-  
+  // <PrettyComponents/> 
   // ========================================
   
   ReactDOM.render(

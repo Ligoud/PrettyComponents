@@ -1,10 +1,9 @@
 @import 'extends';
+@import 'variables';
 
-$bWidht:150px;
-$bHeight:100px;
 
 .buttonStyle1{
-    @include componentCenter(relative,$bWidht,$bHeight);
+    @include componentCenter(relative,$s1Width,$s2Height);
 
     div{
         position: absolute;
@@ -21,12 +20,12 @@ $bHeight:100px;
         box-shadow:inset 0 0 5px 5px black;
     }
     &:hover .rect_style1{
-        stroke-dasharray: ($bHeight*2 + $bWidht*2) 0;        
+        stroke-dasharray: ($s2Height*2 + $s1Width*2) 0;        
         cursor: pointer;
     }
 }
 .span_style1:hover .rect_style1{
-    stroke-dasharray: ($bHeight*2 + $bWidht*2) 0;        
+    stroke-dasharray: ($s2Height*2 + $s1Width*2) 0;        
     cursor: pointer;
 }
 .svg_style1,.rect_style1{
@@ -36,8 +35,8 @@ $bHeight:100px;
 }
 .rect_style1{ 
     stroke-width: 10px;
-    stroke-dasharray: ($bHeight/2) ($bWidht*2+$bHeight+$bHeight/2);
-    stroke-dashoffset: ($bHeight/4);
+    stroke-dasharray: ($s2Height/2) ($s1Width*2+$s2Height+$s2Height/2);
+    stroke-dashoffset: ($s2Height/4);
     transition: .5s;
     
 }

@@ -1,0 +1,54 @@
+@import 'extends';
+@import 'variables';
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.algField{
+    //
+}
+
+.algRow{
+  margin-bottom: 5px;  
+}
+.cardWrapper{
+    padding:0;
+    margin: 0;
+    cursor: pointer;
+}
+$cardMargin:2px;
+.algCard{
+    position: relative;
+    margin-left: $cardMargin;
+
+    height: calc((100vw - 40px - (#{$cardMargin}*4)) / #{$cardInRow});    //40px это паддинг поля. 6px это марджин между элементами
+    //
+    border: 1px solid black;
+    border-left: 0;
+    border-right: 0;
+    //
+    transition: 0.5s all;
+
+    &:hover{
+        transform: rotateY(15deg);
+        box-shadow: 5px 0 3px 0 gray;
+        border-left: 1px solid black;        
+    }
+
+    span{
+        
+        @include componentCenter(absolute,80%);
+
+        user-select:  none;
+    }
+}
+.dark .algCard{
+    border: 1px solid white;
+    border-left: 0;
+    border-right: 0;
+    &:hover{
+        border-left: 1px solid white;  
+    }
+}

@@ -1,11 +1,8 @@
 @import 'extends';
-
-$width:100px;
-$height:100px;
-$eggRadius:63%, 37%, 58%, 42%, 58%, 31%, 69%, 42% ;
+@import 'variables';
 
 .buttonStyle2{
-    @include componentCenter(relative,$width,$height);
+    @include componentCenter(relative,$s2Width,$s2Height);
     
     div{
         position: absolute;

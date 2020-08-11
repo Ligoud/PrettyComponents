@@ -1,0 +1,33 @@
+@import 'variables';
+
+
+.sortingField{
+    cursor: pointer;
+    width: 100%;
+    height: calc(100vh - #{$navtopH} - 40px);   //40 - padding
+
+    //test
+    border: 1px solid black;
+    //
+    
+    &:hover {
+        @for $i from 1 through 100 {
+            .musicBar[id='el#{$i}']{
+                height: ((random($limit: (90))+10)*1%);
+                background-color: rgb(random($limit:(255)), random($limit:(255)), random($limit:(255)));
+            }
+        }
+    }
+}
+.musicBar{
+    float: left;
+    border: 1px solid black;
+    //height: 50%;
+    transition: 2.5s;
+}
+@for $i from 1 through 100 {
+    .musicBar[id='el#{$i}']{
+        height: ((random($limit: (90))+10)*1%);
+        background-color: rgb(random($limit:(255)), random($limit:(255)), random($limit:(255)));
+    }
+}
