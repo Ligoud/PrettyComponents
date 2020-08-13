@@ -40,7 +40,7 @@ class Field extends React.Component {
       return (
         <div>
           <PrettyNavbar onNavClicked={this.navclicked}/>
-          <div id='field' className='hideScrollBar'>
+          <div id='field' className='hideScrollBar'> 
             {body}           
           </div>          
         </div>        

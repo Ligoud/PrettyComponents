@@ -24,3 +24,12 @@
         display: none;
     }            
 }
+
+%randomMusicBar{
+    @for $i from 1 through 100 {
+        .musicBar[id='el#{$i}']{
+            height: ((random($limit: (90))+10)*1%);
+            background-color: rgb(random($limit:(255)), random($limit:(255)), random($limit:(255)));
+        }
+    }
+}

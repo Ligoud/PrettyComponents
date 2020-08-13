@@ -34,7 +34,7 @@ class PrettySortingAlgs extends React.Component{
         let Cards=<Container fluid className='algField'>
                     <Row className='algRow justify-content-around'>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='musicBar'><div className='algCard'><span><h5>MusicBars -like hover effect.</h5><br/> SASS only w/o JS.<br/> (NOT A SORTING ALGHORITM)</span> </div></Col>
-                        <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='default'><div className='algCard'><span>TEXT</span> </div></Col>
+                        <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='bubble'><div className='algCard'><span>Bubble Sort</span> </div></Col>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='default'><div className='algCard'><span>TEXT</span> </div></Col>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='default'><div className='algCard'><span>TEXT</span> </div></Col>
                     </Row>
@@ -42,8 +42,8 @@ class PrettySortingAlgs extends React.Component{
         let disp
         if(this.state.page==='default')
             disp=Cards
-        else if (this.state.page==='musicBar')
-            disp=<SortingPage/>  
+        else
+            disp=<SortingPage barsType={this.state.page}/>  
         return(
             <div>
                 {disp}                            
