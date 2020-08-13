@@ -11,7 +11,7 @@ class SortingPage extends React.Component{
         super(props)
         this.state={
             size:100,
-            bubble: new BubbleSort(100),
+            
         }
     }
     componentDidMount(){
@@ -28,9 +28,10 @@ class SortingPage extends React.Component{
         
         switch(customClass){
             case 'bubble':
-                sort=this.state.bubble
+                sort=new BubbleSort(this.state.size)
                 break;
             default:
+                sort=new Sort(this.state.size)
                 break;
         }
 
