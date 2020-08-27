@@ -1,5 +1,6 @@
 import $ from 'jquery'
 
+//Сюда нужно для 
 class Sort{
     constructor(size){
         this.sizeArr=[]
@@ -28,7 +29,8 @@ class Sort{
         return this.sizeArr
     }
 
-    animateSwap(i,j,color,_break){
+    //Обменивает и отображает две полоски в порядке возрастания
+    animateSwap(i,j,color,_break=true){
         //if(i != undefined && j!=undefined && color!=undefined){
         let id1 = '#el' + j
         let bar1 = $(id1)
@@ -64,6 +66,8 @@ class Sort{
    // }
         return _break
     }
+
+    //Нужен еще один метод для квиксорта, так как там идет обмен по другому принципу
 }
 
 

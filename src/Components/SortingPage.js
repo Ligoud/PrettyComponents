@@ -5,6 +5,7 @@ import '../scss/sorting.scss'
 //Sorting Classes
 import Sort from '../SortingAlghoritms/Sort'
 import BubbleSort from '../SortingAlghoritms/BubbleSort'
+import QuickSort from '../SortingAlghoritms/QuickSort'
 //
 class SortingPage extends React.Component{
     constructor(props){
@@ -29,6 +30,9 @@ class SortingPage extends React.Component{
         switch(customClass){
             case 'bubble':
                 sort=new BubbleSort(this.state.size)
+                break;
+            case 'quick':
+                sort=new QuickSort(this.state.size)
                 break;
             default:
                 sort=new Sort(this.state.size)

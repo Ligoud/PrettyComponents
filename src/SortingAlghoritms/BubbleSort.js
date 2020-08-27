@@ -10,12 +10,7 @@ class BubbleSort extends Sort {
     }
     //Добавил эту чтобы
     sortRecursion(i, j, color,_break) {
-        //console.log(i, j, color)
-        /* #region  coloring */
-        
-        //
-        _break=this.animateSwap(i,j,color,_break)
-        
+        _break=this.animateSwap(i,j,color,_break)        
         
         color = !color
         if (color) {

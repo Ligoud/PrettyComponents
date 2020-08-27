@@ -35,7 +35,7 @@ class PrettySortingAlgs extends React.Component{
                     <Row className='algRow justify-content-around'>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='musicBar'><div className='algCard'><span><h5>MusicBars -like hover effect.</h5><br/> SASS only w/o JS.<br/> (NOT A SORTING ALGHORITM)</span> </div></Col>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='bubble'><div className='algCard'><span>Bubble Sort</span> </div></Col>
-                        <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='default'><div className='algCard'><span>TEXT</span> </div></Col>
+                        <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='quick'><div className='algCard'><span>TEXT</span> </div></Col>
                         <Col xs={3} className='cardWrapper' onClick={this.handleClick} data-card='default'><div className='algCard'><span>TEXT</span> </div></Col>
                     </Row>
                 </Container> ;
